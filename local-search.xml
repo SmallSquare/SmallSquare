@@ -11,10 +11,18 @@
     <content type="html"><![CDATA[<p>当使用命令 <code>set-executionpolicy remotesigned</code> 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。</p><p>When using the command <code>set-executionpolicy remotesigned</code> to allow scripts running on powershell, current user may not be appled the change.</p><figure class="highlight dsconfig"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-built_in">set-executionpolicy</span> : <span class="hljs-string">Windows</span> <span class="hljs-string">PowerShell</span> 已成功更新你的执行策略，但在更具体的作业域中定义的策略覆盖了该设置。由于发生覆盖，你的外壳程序将保留其当前的有效执行策略 <span class="hljs-string">Restricted</span>。请键入“<span class="hljs-string">Get-ExecutionPolicy</span> -<span class="hljs-string">List</span>”以查看你的执行策略设置。有关详细信息，请参阅“<span class="hljs-string">Get-Help</span> <span class="hljs-string">Set-ExecutionPolicy</span>”。<br>所在位置 行:<span class="hljs-string">1</span> 字符: <span class="hljs-string">1</span><br>+ <span class="hljs-built_in">set-executionpolicy</span> <span class="hljs-string">remotesigned</span><br>+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>+ <span class="hljs-string">CategoryInfo</span> : <span class="hljs-string">PermissionDenied</span>: (:) [<span class="hljs-string">Set-ExecutionPolicy</span>], <span class="hljs-string">SecurityException</span><br>+ <span class="hljs-string">FullyQualifiedErrorId</span> : <span class="hljs-string">ExecutionPolicyOverride</span>,<span class="hljs-string">Microsoft</span>.<span class="hljs-string">PowerShell</span>.<span class="hljs-string">Commands</span>.<span class="hljs-string">SetExecutionPolicyCommand</span><br></code></pre></td></tr></table></figure><p>这时可以使用命令<code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code>来更新当前用户的策略，然后就可以轻松地在powershell运行脚本啦~</p><p>In this case, we can use command <code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code> to update the policy on current user. It will work now.</p>]]></content>
     
     
+    <categories>
+      
+      <category>Windows</category>
+      
+      <category>Powershell</category>
+      
+    </categories>
+    
     
     <tags>
       
-      <tag>Powershell</tag>
+      <tag>技术</tag>
       
     </tags>
     
@@ -30,10 +38,18 @@
     <content type="html"><![CDATA[<p>鄙人不才，一共也没写过几篇博客也没啥质量，哈哈哈哈哈哈🤣🤣🤣。但是还是想把东西都放一起，所以放在这儿了。以前还学习过Android开发，现在退坑了。</p><p>I haven’t written a few blogs in total (xDDDDD🤣🤣🤣), but I still wanted to collect them together here. No longer messing with Android now👋👋👋.</p><h2 id="Links"><a href="#Links" class="headerlink" title="Links:"></a>Links:</h2><p><a href="https://blog.csdn.net/SmallSquare/article/details/86773697">Android开发-向ViewPager动态添加时报错java.lang.IllegalStateException</a></p><p><a href="https://blog.csdn.net/SmallSquare/article/details/86773634">Android开发-Gson解析数据</a></p><p><a href="https://blog.csdn.net/SmallSquare/article/details/86669254">Android开发-RecyclerView简单实现对Item的事件响应以及交互效果</a></p><p><a href="https://blog.csdn.net/SmallSquare/article/details/79506097">Raspberry Pi 3B音频口底噪太大的解决办法</a></p><p><a href="https://blog.csdn.net/SmallSquare/article/details/79332832">Realtek 8822be无线网卡在Ubuntu16&#x2F;17上驱动问题的完美解决方案</a></p>]]></content>
     
     
+    <categories>
+      
+      <category>CSDN</category>
+      
+    </categories>
+    
     
     <tags>
       
-      <tag>CSDN</tag>
+      <tag>技术</tag>
+      
+      <tag>整理</tag>
       
     </tags>
     
