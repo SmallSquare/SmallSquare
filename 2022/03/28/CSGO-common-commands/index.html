@@ -16,21 +16,21 @@
   <meta name="author" content="SmallSquare">
   <meta name="keywords" content="">
   
-    <meta name="description" content="当使用命令 set-executionpolicy remotesigned 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。 When using the command set-executionpolicy remotesigned to allow scripts running on powershell, current user may not be a">
+    <meta name="description" content="网上有很多整理的，但是很多很实用的命令简中社区查不到，因此整理一份我个人觉得更实用的，长期更新。 最最最基本的指令connect [ip]:[port] password [pwd] 连接某服务器 disconnect retry 断开连接&#x2F;重连 quit 退出游戏 net_graph 0&#x2F;1 关闭&#x2F;显示网络状况，如fps、ping、loss、choke、var、tick等 f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts">
-<meta property="og:url" content="http://example.com/2022/03/27/Powershell-disable-runing-scripts/index.html">
+<meta property="og:title" content="CSGO中常用命令整理 CSGO common commands">
+<meta property="og:url" content="http://example.com/2022/03/28/CSGO-common-commands/index.html">
 <meta property="og:site_name" content="SmallSquare&#39;s Blog">
-<meta property="og:description" content="当使用命令 set-executionpolicy remotesigned 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。 When using the command set-executionpolicy remotesigned to allow scripts running on powershell, current user may not be a">
+<meta property="og:description" content="网上有很多整理的，但是很多很实用的命令简中社区查不到，因此整理一份我个人觉得更实用的，长期更新。 最最最基本的指令connect [ip]:[port] password [pwd] 连接某服务器 disconnect retry 断开连接&#x2F;重连 quit 退出游戏 net_graph 0&#x2F;1 关闭&#x2F;显示网络状况，如fps、ping、loss、choke、var、tick等 f">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-27T21:03:33.000Z">
-<meta property="article:modified_time" content="2022-03-27T23:07:03.085Z">
+<meta property="article:published_time" content="2022-03-28T03:58:22.000Z">
+<meta property="article:modified_time" content="2022-03-28T05:49:34.527Z">
 <meta property="article:author" content="SmallSquare">
-<meta property="article:tag" content="技术">
+<meta property="article:tag" content="整理">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts - SmallSquare&#39;s Blog</title>
+  <title>CSGO中常用命令整理 CSGO common commands - SmallSquare&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -176,7 +176,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts">
+            <span class="h2" id="subtitle" title="CSGO中常用命令整理 CSGO common commands">
               
             </span>
 
@@ -186,8 +186,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-27 22:03" pubdate>
-        2022年3月27日 晚上
+      <time datetime="2022-03-28 04:58" pubdate>
+        2022年3月28日 凌晨
       </time>
     </span>
   
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      851 字
+      1.5k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8 分钟
+      13 分钟
     </span>
   
 
@@ -235,15 +235,63 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts</h1>
+            <h1 style="display: none">CSGO中常用命令整理 CSGO common commands</h1>
             
             <div class="markdown-body">
-              <p>当使用命令 <code>set-executionpolicy remotesigned</code> 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。</p>
-<p>When using the command <code>set-executionpolicy remotesigned</code> to allow scripts running on powershell, current user may not be appled the change.</p>
-<figure class="highlight dsconfig"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-built_in">set-executionpolicy</span> : <span class="hljs-string">Windows</span> <span class="hljs-string">PowerShell</span> 已成功更新你的执行策略，但在更具体的作业域中定义的策略覆盖了该设置。由于发生覆盖，你的外壳程序将保留其当前的有效执行策略 <span class="hljs-string">Restricted</span>。请键入“<span class="hljs-string">Get-ExecutionPolicy</span> -<span class="hljs-string">List</span>”以查看你的执行策略设置。有关详细信息，请参阅“<span class="hljs-string">Get-Help</span> <span class="hljs-string">Set-ExecutionPolicy</span>”。<br>所在位置 行:<span class="hljs-string">1</span> 字符: <span class="hljs-string">1</span><br>+ <span class="hljs-built_in">set-executionpolicy</span> <span class="hljs-string">remotesigned</span><br>+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>+ <span class="hljs-string">CategoryInfo</span> : <span class="hljs-string">PermissionDenied</span>: (:) [<span class="hljs-string">Set-ExecutionPolicy</span>], <span class="hljs-string">SecurityException</span><br>+ <span class="hljs-string">FullyQualifiedErrorId</span> : <span class="hljs-string">ExecutionPolicyOverride</span>,<span class="hljs-string">Microsoft</span>.<span class="hljs-string">PowerShell</span>.<span class="hljs-string">Commands</span>.<span class="hljs-string">SetExecutionPolicyCommand</span><br></code></pre></td></tr></table></figure>
-
-<p>这时可以使用命令<code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code>来更新当前用户的策略，然后就可以轻松地在powershell运行脚本啦~</p>
-<p>In this case, we can use command <code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code> to update the policy on current user. It will work now.</p>
+              <p>网上有很多整理的，但是很多很实用的命令简中社区查不到，因此整理一份我个人觉得更实用的，长期更新。</p>
+<h1 id="最最最基本的指令"><a href="#最最最基本的指令" class="headerlink" title="最最最基本的指令"></a>最最最基本的指令</h1><p><code>connect [ip]:[port] password [pwd]</code> 连接某服务器</p>
+<p><code>disconnect</code> <code>retry</code> 断开连接&#x2F;重连</p>
+<p><code>quit</code> 退出游戏</p>
+<p><code>net_graph 0/1</code> 关闭&#x2F;显示网络状况，如fps、ping、loss、choke、var、tick等</p>
+<p><code>fps_max 400</code> 最高fps</p>
+<h1 id="服务器内的指令"><a href="#服务器内的指令" class="headerlink" title="服务器内的指令"></a>服务器内的指令</h1><h2 id="基本的"><a href="#基本的" class="headerlink" title="基本的"></a>基本的</h2><p><code>mp_restartgame 1</code> 1秒后重开游戏</p>
+<p><code>mp_autoteambalance 0/1</code> 自动平衡关闭&#x2F;开启</p>
+<p><code>mp_maxmoney 16000</code> 最高金钱</p>
+<p><code>mp_startmoney 16000</code> 出生金钱</p>
+<p><code>mp_buy_anywhere 1</code> 任意地点购买</p>
+<p><code>mp_buytime 15</code> 开局购买时间限制</p>
+<p><code>mp_roundtime 60</code> 回合时间，单位分钟</p>
+<p><code>mp_maxrounds 30</code> 最高回合数</p>
+<p><code>mp_freezetime 0</code> 每局出生原地冻结时间0秒</p>
+<p><code>mp_warmup_end</code> 立即结束热身时间</p>
+<p><code>mp_friendlyfire 0/1</code> 关闭&#x2F;开启友伤</p>
+<p><code>mp_limitteams 2</code> 阵营差异</p>
+<p><code>maxplayers 16</code> 最多玩家数</p>
+<p><code>map de_inferno</code> 切换地图(如de_mirage、de_inferno)</p>
+<p><code>maps</code> 列出该服务器所有地图</p>
+<p><code>mp_overtime_enable 0/1</code> 关闭&#x2F;开启加时赛</p>
+<p><code>mp_randomspawn 0/1</code> 关闭&#x2F;开启随机出生点</p>
+<p><code>mp_teammates_are_enemies 1</code> 无阵营区分，适合死斗</p>
+<p><code>exec gamemode_[gamemode name]</code> 更改游戏模式</p>
+<p><code>sv_cheats 0/1</code> 关闭&#x2F;开启作弊功能，部分功能需要此选项开启</p>
+<p><code>sv_gravity 800</code> 重力，默认800</p>
+<p><code>give weapon_[weapon name]</code> 获得武器</p>
+<p><code>god</code> <code>gods</code> 自己&#x2F;所有人godmode</p>
+<p><code>r_drawothermodels 2</code> 透视绘制</p>
+<p><code>noclip</code> 无视墙</p>
+<p><code>sv_infinite_ammo 0/1/2</code> 无限弹药</p>
+<p><code>host_timescale 1.0</code> 时间倍率，用来调速</p>
+<h2 id="Bot相关"><a href="#Bot相关" class="headerlink" title="Bot相关"></a>Bot相关</h2><p><code>bot_add</code> 随机增加一个bot</p>
+<p><code>bot_add_ct</code> 增加一名CT bot</p>
+<p><code>bot_add_t</code> 增加一名T bot</p>
+<p><code>bot_kick</code> 踢出所有bot</p>
+<p><code>bot_kill</code> 杀死所有bot</p>
+<p><code>bot_stop 1</code> bot原地不动</p>
+<p><code>bot_freeze 1</code> 冻结所有bot</p>
+<p><code>bot_difficulty 0/1/2/3</code> 设置bot难度</p>
+<h2 id="语音频道"><a href="#语音频道" class="headerlink" title="语音频道"></a>语音频道</h2><p><code>sv_alltalk 0/1</code> 关闭&#x2F;开启敌方语音频道</p>
+<p>有时需要配合<code>sv_talk_enemy_dead 0/1</code> <code>sv_talk_enemy_living 0/1</code></p>
+<p><code>sv_full_alltalk 0/1</code> 关闭&#x2F;开启所有人互通的语音频道，包括观众</p>
+<p><code>sv_deadtalk 0/1</code> 关闭&#x2F;开启天堂语音频道（死人说话）</p>
+<h1 id="服务器内的进阶指令"><a href="#服务器内的进阶指令" class="headerlink" title="服务器内的进阶指令"></a>服务器内的进阶指令</h1><h2 id="跑图相关"><a href="#跑图相关" class="headerlink" title="跑图相关"></a>跑图相关</h2><p><code>sv_showimpacts 1</code> 显示子弹落点</p>
+<p><code>sv_showimpacts_time 15</code> 子弹落点停留时间</p>
+<p><code>sv_grenade_trajectory 1</code> 显示投掷物轨迹</p>
+<p><code>sv_grenade_trajectory_time 15</code> 投掷物轨迹停留时间</p>
+<h2 id="连跳相关"><a href="#连跳相关" class="headerlink" title="连跳相关"></a>连跳相关</h2><p><code>sv_enablebunnyhopping 1</code> 允许连跳</p>
+<p><code>sv_autobunnyhopping 1;</code> 自动连跳</p>
+<h2 id="弹道扩散相关"><a href="#弹道扩散相关" class="headerlink" title="弹道扩散相关"></a>弹道扩散相关</h2><p><code>weapon_accuracy_nospread 0/1</code> 枪口不扩散，类似跳狙飞人</p>
+<p>本篇将会长期更新。</p>
+<p>针对更多需要，可以查看这个Link <a target="_blank" rel="noopener" href="https://totalcsgo.com/commands">CS:GO Commands List</a>.</p>
 
             </div>
             <hr>
@@ -253,9 +301,9 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Windows/">Windows</a>
+                      <a class="hover-with-bg" href="/categories/%E5%A8%B1%E4%B9%90/">娱乐</a>
                     
-                      <a class="hover-with-bg" href="/categories/Windows/Powershell/">Powershell</a>
+                      <a class="hover-with-bg" href="/categories/%E5%A8%B1%E4%B9%90/CSGO/">CSGO</a>
                     
                   </div>
                 
@@ -263,7 +311,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%B4%E7%90%86/">整理</a>
                     
                   </div>
                 
@@ -280,18 +328,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/28/CSGO-common-commands/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CSGO中常用命令整理 CSGO common commands</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/01/01/Previous-articles/">
-                        <span class="hidden-mobile">之前的几篇水博 Previous blogs</span>
+                      <a href="/2022/03/27/Powershell-disable-runing-scripts/">
+                        <span class="hidden-mobile">解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
