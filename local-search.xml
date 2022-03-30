@@ -4,31 +4,6 @@
   
   
   <entry>
-    <title>LaTeX插入图片及多行多列图片排版</title>
-    <link href="/2022/03/30/LaTeX-insert-images/"/>
-    <url>/2022/03/30/LaTeX-insert-images/</url>
-    
-    <content type="html"><![CDATA[<h1 id="LaTeX插入一张图片"><a href="#LaTeX插入一张图片" class="headerlink" title="LaTeX插入一张图片"></a>LaTeX插入一张图片</h1><p>首先导入宏包</p><figure class="highlight dust"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs dust"><span class="language-xml">\usepackage</span><span class="hljs-template-variable">&#123;graphicx&#125;</span><br></code></pre></td></tr></table></figure><p>插入图片</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css">\begin&#123;<span class="hljs-selector-tag">figure</span>&#125;<span class="hljs-selector-attr">[htbp]</span><br>    \centering<br>    \includegraphics<span class="hljs-selector-attr">[width=0.6\textwidth]</span>&#123;figures/image<span class="hljs-selector-class">.png</span>&#125;<br>    \<span class="hljs-selector-tag">caption</span>&#123;题注&#125;<br>\end&#123;<span class="hljs-selector-tag">figure</span>&#125;<br></code></pre></td></tr></table></figure><p>其中，<code>[htbp]</code>是控制图片位置的参数</p><table><thead><tr><th align="center">param</th><th align="center">position</th></tr></thead><tbody><tr><td align="center">h</td><td align="center">当前位置</td></tr><tr><td align="center">t</td><td align="center">页面顶部</td></tr><tr><td align="center">b</td><td align="center">页面底部</td></tr><tr><td align="center">p</td><td align="center">浮动</td></tr></tbody></table><h1 id="插入并列的两张独立图片"><a href="#插入并列的两张独立图片" class="headerlink" title="插入并列的两张独立图片"></a>插入并列的两张独立图片</h1><p>使用<code>minipage</code>分栏实现并列图片插入</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs dust"><span class="language-xml">\begin</span><span class="hljs-template-variable">&#123;figure&#125;</span><span class="language-xml">[htbp]</span><br><span class="language-xml">    \begin</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml">[t]</span><span class="hljs-template-variable">&#123;0.5\linewidth&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \centering</span><br><span class="language-xml">        \includegraphics[width=0.8\textwidth]</span><span class="hljs-template-variable">&#123;figures/image1.png&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \caption</span><span class="hljs-template-variable">&#123;题注1&#125;</span><span class="language-xml"></span><br><span class="language-xml">    \end</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml">%</span><br><span class="language-xml">    \begin</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml">[t]</span><span class="hljs-template-variable">&#123;0.5\linewidth&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \centering</span><br><span class="language-xml">        \includegraphics[width=0.8\textwidth]</span><span class="hljs-template-variable">&#123;figures/image2.png&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \caption</span><span class="hljs-template-variable">&#123;题注2&#125;</span><span class="language-xml"></span><br><span class="language-xml">    \end</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml"></span><br><span class="language-xml">\end</span><span class="hljs-template-variable">&#123;figure&#125;</span><br></code></pre></td></tr></table></figure><p>效果如下<br><img src="/%E5%B9%B6%E5%88%972.jpg" alt="并列效果图"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>LaTeX</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>技术</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts</title>
     <link href="/2022/03/27/Powershell-disable-runing-scripts/"/>
     <url>/2022/03/27/Powershell-disable-runing-scripts/</url>
@@ -47,7 +22,9 @@
     
     <tags>
       
-      <tag>技术 EN</tag>
+      <tag>技术</tag>
+      
+      <tag>EN</tag>
       
     </tags>
     
@@ -99,7 +76,9 @@
     
     <tags>
       
-      <tag>技术 EN</tag>
+      <tag>技术</tag>
+      
+      <tag>EN</tag>
       
     </tags>
     
@@ -125,6 +104,31 @@
     <tags>
       
       <tag>整理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LaTeX插入图片及多行多列图片排版</title>
+    <link href="/2022/03/18/LaTeX-insert-images/"/>
+    <url>/2022/03/18/LaTeX-insert-images/</url>
+    
+    <content type="html"><![CDATA[<h1 id="LaTeX插入一张图片"><a href="#LaTeX插入一张图片" class="headerlink" title="LaTeX插入一张图片"></a>LaTeX插入一张图片</h1><p>首先导入宏包</p><figure class="highlight dust"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs dust"><span class="language-xml">\usepackage</span><span class="hljs-template-variable">&#123;graphicx&#125;</span><br></code></pre></td></tr></table></figure><p>插入图片</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css">\begin&#123;<span class="hljs-selector-tag">figure</span>&#125;<span class="hljs-selector-attr">[htbp]</span><br>    \centering<br>    \includegraphics<span class="hljs-selector-attr">[width=0.6\textwidth]</span>&#123;figures/image<span class="hljs-selector-class">.png</span>&#125;<br>    \<span class="hljs-selector-tag">caption</span>&#123;题注&#125;<br>\end&#123;<span class="hljs-selector-tag">figure</span>&#125;<br></code></pre></td></tr></table></figure><p>其中，<code>[htbp]</code>是控制图片位置的参数</p><table><thead><tr><th align="center">param</th><th align="center">position</th></tr></thead><tbody><tr><td align="center">h</td><td align="center">当前位置</td></tr><tr><td align="center">t</td><td align="center">页面顶部</td></tr><tr><td align="center">b</td><td align="center">页面底部</td></tr><tr><td align="center">p</td><td align="center">浮动</td></tr></tbody></table><h1 id="插入并列的两张独立图片"><a href="#插入并列的两张独立图片" class="headerlink" title="插入并列的两张独立图片"></a>插入并列的两张独立图片</h1><p>使用<code>minipage</code>分栏实现并列图片插入</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs dust"><span class="language-xml">\begin</span><span class="hljs-template-variable">&#123;figure&#125;</span><span class="language-xml">[htbp]</span><br><span class="language-xml">    \begin</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml">[t]</span><span class="hljs-template-variable">&#123;0.5\linewidth&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \centering</span><br><span class="language-xml">        \includegraphics[width=0.8\textwidth]</span><span class="hljs-template-variable">&#123;figures/image1.png&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \caption</span><span class="hljs-template-variable">&#123;题注1&#125;</span><span class="language-xml"></span><br><span class="language-xml">    \end</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml">%</span><br><span class="language-xml">    \begin</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml">[t]</span><span class="hljs-template-variable">&#123;0.5\linewidth&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \centering</span><br><span class="language-xml">        \includegraphics[width=0.8\textwidth]</span><span class="hljs-template-variable">&#123;figures/image2.png&#125;</span><span class="language-xml"></span><br><span class="language-xml">        \caption</span><span class="hljs-template-variable">&#123;题注2&#125;</span><span class="language-xml"></span><br><span class="language-xml">    \end</span><span class="hljs-template-variable">&#123;minipage&#125;</span><span class="language-xml"></span><br><span class="language-xml">\end</span><span class="hljs-template-variable">&#123;figure&#125;</span><br></code></pre></td></tr></table></figure><p>效果如下<br><img src="/2022/03/18/LaTeX-insert-images/%E5%B9%B6%E5%88%972.png" alt="并列效果图"></p><h1 id="插入并列的两张不独立的图片"><a href="#插入并列的两张不独立的图片" class="headerlink" title="插入并列的两张不独立的图片"></a>插入并列的两张不独立的图片</h1><p>直接连续使用两次<code>\includegraphics[]&#123;&#125;</code>即可，<code>\hspace&#123;&#125;</code>表示间距。</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><span class="hljs-string">\begin&#123;figure&#125;[htbp]</span><br>    <span class="hljs-string">\centering</span><br>    <span class="hljs-string">\includegraphics[width=0.4\textwidth]&#123;figures/image1.png&#125;</span><br>    <span class="hljs-string">\hspace&#123;0.1in&#125;</span><br>    <span class="hljs-string">\includegraphics[width=0.4\textwidth]&#123;figures/image2.png&#125;</span><br>    <span class="hljs-string">\caption&#123;Result&#125;</span><br><span class="hljs-string">\end&#123;figure&#125;</span><br></code></pre></td></tr></table></figure><p>效果如下<br><img src="/2022/03/18/LaTeX-insert-images/%E5%B9%B6%E5%88%971.png" alt="并列效果图"></p><h1 id="插入多行多列，其中每列算一个独立图片"><a href="#插入多行多列，其中每列算一个独立图片" class="headerlink" title="插入多行多列，其中每列算一个独立图片"></a>插入多行多列，其中每列算一个独立图片</h1><p>写Report的时候突然有这样一个需求，就是实现下图这种每列算一个独立图片的多行多列图片。每个独立图片里面其实有两张图片。</p><p><img src="/2022/03/18/LaTeX-insert-images/%E5%A4%9A%E8%A1%8C%E5%A4%9A%E5%88%972.png" alt="多行多列效果图"></p><p>使用<code>minipage</code>分栏，然后使用<code>\\</code>实现图片换行竖排显示。<br>具体实现办法如下：</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><span class="hljs-string">\begin&#123;figure&#125;[htbp]</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\begin&#123;minipage&#125;[t]&#123;0.3\linewidth&#125;</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\includegraphics[width=4cm]&#123;figures/image11.png&#125;</span> <span class="hljs-string">\\</span><br>        <span class="hljs-string">\includegraphics[width=4cm]&#123;figures/image12.png&#125;</span><br>        <span class="hljs-string">\caption&#123;\\1&#125;</span><br><span class="hljs-string">\end&#123;minipage&#125;</span><br><span class="hljs-string">\begin&#123;minipage&#125;[t]&#123;0.3\linewidth&#125;</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\includegraphics[width=4cm]&#123;figures/21.png&#125;</span> <span class="hljs-string">\\</span><br>        <span class="hljs-string">\includegraphics[width=4cm]&#123;figures/22.png&#125;</span><br>        <span class="hljs-string">\caption&#123;\\2&#125;</span><br><span class="hljs-string">\end&#123;minipage&#125;</span><br><span class="hljs-string">\begin&#123;minipage&#125;[t]&#123;0.3\linewidth&#125;</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\includegraphics[width=4cm]&#123;figures/31.png&#125;</span> <span class="hljs-string">\\</span><br>        <span class="hljs-string">\includegraphics[width=4cm]&#123;figures/32.png&#125;</span><br>        <span class="hljs-string">\caption&#123;\\3&#125;</span><br><span class="hljs-string">\end&#123;minipage&#125;</span><br><span class="hljs-string">\end&#123;figure&#125;</span><br><br><span class="hljs-string">\begin&#123;figure&#125;[htbp]</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\begin&#123;minipage&#125;[t]&#123;0.3\linewidth&#125;</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\includegraphics[width=4cm]&#123;figures/41.png&#125;</span> <span class="hljs-string">\\</span><br>        <span class="hljs-string">\includegraphics[width=4cm]&#123;figures/42.png&#125;</span><br>        <span class="hljs-string">\caption&#123;\\4&#125;</span><br><span class="hljs-string">\end&#123;minipage&#125;</span><br><span class="hljs-string">\begin&#123;minipage&#125;[t]&#123;0.3\linewidth&#125;</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\includegraphics[width=4cm]&#123;figures/51.png&#125;</span> <span class="hljs-string">\\</span><br>        <span class="hljs-string">\includegraphics[width=4cm]&#123;figures/52.png&#125;</span><br>        <span class="hljs-string">\caption&#123;\\5&#125;</span><br><span class="hljs-string">\end&#123;minipage&#125;</span><br><span class="hljs-string">\begin&#123;minipage&#125;[t]&#123;0.3\linewidth&#125;</span><br><span class="hljs-string">\centering</span><br><span class="hljs-string">\includegraphics[width=4cm]&#123;figures/61.png&#125;</span> <span class="hljs-string">\\</span><br>        <span class="hljs-string">\includegraphics[width=4cm]&#123;figures/62.png&#125;</span><br>        <span class="hljs-string">\caption&#123;\\6&#125;</span><br><span class="hljs-string">\end&#123;minipage&#125;</span><br><span class="hljs-string">\end&#123;figure&#125;</span><br></code></pre></td></tr></table></figure><h1 id="多行多列子图"><a href="#多行多列子图" class="headerlink" title="多行多列子图"></a>多行多列子图</h1><p>使用<code>/subfigure</code>可以划分子图，具体做法先不写了，可以先参考一下这篇<a href="https://blog.csdn.net/itnerd/article/details/105199014">latex 排列多个子图</a>，以后可能填坑。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
       
     </tags>
     
