@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>PyCharm下的Jupyter Notebook输出图片颜色反转的原因</title>
+    <link href="/2022/04/06/pycharm-jupyter-inverse-color/"/>
+    <url>/2022/04/06/pycharm-jupyter-inverse-color/</url>
+    
+    <content type="html"><![CDATA[<p>今天debug两小时不知道为什么输入的图片画出来颜色怪怪的，以为是通道不对，调了半天发现RGB通道根本没问题，最后发现是pycharm会在深色皮肤下默认反转jupyter notebook输出图片的颜色，吐了。</p><p><img src="/1.jpg" alt="&quot;zombie&quot; flower"></p><p>修改如下设置回归正常颜色。</p><p><img src="/3.jpg" alt="setting"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Pycharm</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts</title>
     <link href="/2022/03/27/Powershell-disable-runing-scripts/"/>
     <url>/2022/03/27/Powershell-disable-runing-scripts/</url>
