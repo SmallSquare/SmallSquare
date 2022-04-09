@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10</title>
+    <link href="/2022/04/09/Solution-to-slow-start-with-hot-key-on-Windows11-10/"/>
+    <url>/2022/04/09/Solution-to-slow-start-with-hot-key-on-Windows11-10/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Windows上的快捷启动会变得缓慢"><a href="#Windows上的快捷启动会变得缓慢" class="headerlink" title="Windows上的快捷启动会变得缓慢"></a>Windows上的快捷启动会变得缓慢</h1><p>快捷键启动指的是诸如<code>win+shift+数字键</code>和<code>Ctrl+Alt+自定义键</code>的快捷键启动方式，比如自定义<code>Ctrl+Alt+T</code>为Windows Terminal的快捷键。</p><p>Starting with hotkey means hotkeys like <code>win+shift+num</code> and <code>Ctrl+Alt+custom key</code>on Windows. For example, people often set <code>Ctrl+Alt+T</code> to be the hotkey of starting Windows Terminal.</p><p><img src="/2022/04/09/Solution-to-slow-start-with-hot-key-on-Windows11-10/terminal.png" alt="Windows Terminal"></p><p>但是Windows有个bug会使得快捷键启动反应很慢。</p><p>But there is a bug on Windows making it slow when starting something.</p><h1 id="Windows10"><a href="#Windows10" class="headerlink" title="Windows10"></a>Windows10</h1><p>在Windows10上，进入设置，隐私，后台应用，关闭“设置”的后台权限即可解决。</p><p>On Windows10, you can solve that by going to Settings, Privacy, Background Apps and turning off the permission of “Setting”.</p><h1 id="Windows11"><a href="#Windows11" class="headerlink" title="Windows11"></a>Windows11</h1><p>Windows11中，微软移除了Windows10里的后台应用菜单，但是可以进入应用设置菜单关闭这个选项。在Windows11上，在开始菜单右键设置，进入应用设置，将后台应用权限修改为“从不”。</p><p>In Windows 11, Microsoft removed the background application menu from Windows 10. On Windows 11, now you need to right-click on Settings in the Start menu, go to Application Settings and change the background application permission to “Never”.</p><p><img src="/2022/04/09/Solution-to-slow-start-with-hot-key-on-Windows11-10/setting.png" alt="Setting on Windows11"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Windows</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
+      
+      <tag>EN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PyCharm下的Jupyter Notebook输出图片颜色反转的原因</title>
     <link href="/2022/04/06/pycharm-jupyter-inverse-color/"/>
     <url>/2022/04/06/pycharm-jupyter-inverse-color/</url>
