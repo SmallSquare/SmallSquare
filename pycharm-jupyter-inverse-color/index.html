@@ -16,22 +16,23 @@
   <meta name="author" content="SmallSquare">
   <meta name="keywords" content="">
   
-    <meta name="description" content="请根据本文使用的Hexo版本自测本文时效性。Please check the version of Hexo before reading. 1234$ hexo -vINFO  Validating confighexo: 6.1.0hexo-cli: 4.3.0  NO!$ npm install hexo-asset-image –save 正确的做法Hexo已经支持Markdown语法插入">
+    <meta name="description" content="今天debug两小时不知道为什么输入的图片画出来颜色怪怪的，以为是通道不对，调了半天发现RGB通道根本没问题，最后发现是pycharm会在深色皮肤下默认反转jupyter notebook输出图片的颜色，吐了。  修改如下设置回归正常颜色。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装hexo-asset-image导致Hexo插入图片无法显示的解决办法 Solution to insert pics in Hexo when hexo-asset-image is installed">
-<meta property="og:url" content="https://smallsquare.github.io/2022/03/23/Solution-to-insert-pics-in-Hexo/index.html">
+<meta property="og:title" content="PyCharm下的Jupyter Notebook输出图片颜色反转的原因">
+<meta property="og:url" content="https://smallsquare.github.io/pycharm-jupyter-inverse-color/index.html">
 <meta property="og:site_name" content="SmallSquare&#39;s Blog">
-<meta property="og:description" content="请根据本文使用的Hexo版本自测本文时效性。Please check the version of Hexo before reading. 1234$ hexo -vINFO  Validating confighexo: 6.1.0hexo-cli: 4.3.0  NO!$ npm install hexo-asset-image –save 正确的做法Hexo已经支持Markdown语法插入">
+<meta property="og:description" content="今天debug两小时不知道为什么输入的图片画出来颜色怪怪的，以为是通道不对，调了半天发现RGB通道根本没问题，最后发现是pycharm会在深色皮肤下默认反转jupyter notebook输出图片的颜色，吐了。  修改如下设置回归正常颜色。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-23T19:53:22.000Z">
-<meta property="article:modified_time" content="2022-03-30T22:11:50.156Z">
+<meta property="og:image" content="https://smallsquare.github.io/pycharm-jupyter-inverse-color/1.png">
+<meta property="article:published_time" content="2022-04-06T11:51:07.000Z">
+<meta property="article:modified_time" content="2022-04-16T21:18:10.823Z">
 <meta property="article:author" content="SmallSquare">
 <meta property="article:tag" content="技术">
-<meta property="article:tag" content="EN">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://smallsquare.github.io/pycharm-jupyter-inverse-color/1.png">
   
   
-  <title>安装hexo-asset-image导致Hexo插入图片无法显示的解决办法 Solution to insert pics in Hexo when hexo-asset-image is installed - SmallSquare&#39;s Blog</title>
+  <title>PyCharm下的Jupyter Notebook输出图片颜色反转的原因 - SmallSquare&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -177,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="安装hexo-asset-image导致Hexo插入图片无法显示的解决办法 Solution to insert pics in Hexo when hexo-asset-image is installed">
+            <span class="h2" id="subtitle" title="PyCharm下的Jupyter Notebook输出图片颜色反转的原因">
               
             </span>
 
@@ -192,8 +193,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-23 19:53" pubdate>
-        2022年3月23日 晚上
+      <time datetime="2022-04-06 12:51" pubdate>
+        2022年4月6日 下午
       </time>
     </span>
   
@@ -203,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      117 字
     </span>
   
 
@@ -212,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16 分钟
+      1 分钟
     </span>
   
 
@@ -249,27 +250,13 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">安装hexo-asset-image导致Hexo插入图片无法显示的解决办法 Solution to insert pics in Hexo when hexo-asset-image is installed</h1>
+            <h1 style="display: none">PyCharm下的Jupyter Notebook输出图片颜色反转的原因</h1>
             
             <div class="markdown-body">
-              <p>请根据本文使用的Hexo版本自测本文时效性。<br>Please check the version of Hexo before reading.</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><pre><code class="hljs routeros">$ hexo -v<br><span class="hljs-built_in">INFO</span>  Validating<span class="hljs-built_in"> config</span><br><span class="hljs-built_in"></span>hexo: 6.1.0<br>hexo-cli: 4.3.0<br></code></pre></td></tr></table></figure>
-
-<h1 id="NO"><a href="#NO" class="headerlink" title="NO!"></a>NO!</h1><p><del><code>$ npm install hexo-asset-image –save</code></del></p>
-<h1 id="正确的做法"><a href="#正确的做法" class="headerlink" title="正确的做法"></a>正确的做法</h1><p>Hexo已经支持Markdown语法插入图片了！！<br>Hexo已经支持Markdown语法插入图片了！！<br>Hexo已经支持Markdown语法插入图片了！！<br>网上说hexo不能用Markdown相对引用图片的资料已经过时了！！<br>*IMPORTANT: Unlike the past, Hexo already supports Markdown syntax for inserting images!</p>
-<p>以下摘自官方：<br>The following is the part of official document:</p>
-<blockquote>
-<p><font size=5>Embedding an image using markdown</font></p>
-<p>hexo-renderer-marked 3.1.0 introduced a new option that allows you to embed an image in markdown without using asset_img tag plugin.</p>
-<p>To enable: </p>
-<blockquote>
-<p><font color="grey">_config.yml</font><br>post_asset_folder: true<br>marked:<br>prependRoot: true<br>postAsset: true</p>
-</blockquote>
-<p>Once enabled, an asset image will be automatically resolved to its corresponding post’s path. For example, “image.jpg” is located at “&#x2F;2020&#x2F;01&#x2F;02&#x2F;foo&#x2F;image.jpg”, meaning it is an asset image of “&#x2F;2020&#x2F;01&#x2F;02&#x2F;foo&#x2F;“ post, <code>![](image.jpg)</code> will be rendered as <code>&lt;img src=&quot;/2020/01/02/foo/image.jpg&quot;&gt;</code>.</p>
-</blockquote>
-<p>所以其实Hexo已经可以不使用繁杂的标签<code>&#123;% asset_img example.jpg This is an example image %&#125;</code>去插入图片了,可以直接使用Markdown语法并进行相对路径引用了，如<code>![](image.jpg)</code>。<br>So actually we don’t need to use the nasty form <code>&#123;% asset_img example.jpg This is an example image %&#125;</code> to insert images. Feel free to use the Markdown way<code>![](image.jpg)</code>.</p>
-<h1 id="错误的做法"><a href="#错误的做法" class="headerlink" title="错误的做法"></a>错误的做法</h1><p>一些网上的资料因为年代久远且被不断翻新会建议使用<code>npm install hexo-asset-image –save</code>命令安装<code>hexo-asset-image</code>进行图片插入。在新版本Hexo不要这样做，否则会导致最终的绝对路径出现bug导致图片无法引用。<br>如果已经执行了，请回退<code>node_modules</code>目录、<code>package.json</code>等文件到之前的版本，并使用<code>hexo clean</code>清除<code>db.json</code>和<code>public</code>目录然后重新生成。</p>
-<p>Some outdated tutorials may tell you that you have to use <code>npm install hexo-asset-image –save</code> to install <code>hexo-asset-image</code> for inserting images. DO NOT DO THAT NOW, cause it will make a bug in generated absolute paths. And the images will be not available in your blogs.<br>If you have already installed it, Please roll back the <code>node_modules</code> directory, <code>package.json</code> and other files to the previous version and use <code>hexo clean</code> to clear the <code>db.json</code> and <code>public</code> directory and then regenerate them.</p>
+              <p>今天debug两小时不知道为什么输入的图片画出来颜色怪怪的，以为是通道不对，调了半天发现RGB通道根本没问题，最后发现是pycharm会在深色皮肤下默认反转jupyter notebook输出图片的颜色，吐了。</p>
+<p><img src="/pycharm-jupyter-inverse-color/1.png" srcset="/img/loading.gif" lazyload alt="&quot;zombie&quot; flower"></p>
+<p>修改如下设置回归正常颜色。</p>
+<p><img src="/pycharm-jupyter-inverse-color/3.png" srcset="/img/loading.gif" lazyload alt="setting"></p>
 
             </div>
             <hr>
@@ -279,7 +266,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Hexo/">Hexo</a>
+                      <a class="hover-with-bg" href="/categories/Pycharm/">Pycharm</a>
                     
                   </div>
                 
@@ -288,8 +275,6 @@
                     <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
-                    
-                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
                     
                   </div>
                 
@@ -306,9 +291,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/25/CSGO-common-commands/">
+                      <a href="/Solution-to-slow-start-with-hot-key-on-Windows11-10/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CSGO中常用命令整理 CSGO common commands</span>
+                        <span class="hidden-mobile">Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -316,8 +301,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/20/Common-commands-of-using-hexo/">
-                        <span class="hidden-mobile">记录一下维护hexo常用的几个命令</span>
+                      <a href="/Powershell-disable-runing-scripts/">
+                        <span class="hidden-mobile">解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

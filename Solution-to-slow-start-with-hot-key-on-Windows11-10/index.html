@@ -16,22 +16,24 @@
   <meta name="author" content="SmallSquare">
   <meta name="keywords" content="">
   
-    <meta name="description" content="当使用命令 set-executionpolicy remotesigned 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。 When using the command set-executionpolicy remotesigned to allow scripts running on powershell, current user may not be a">
+    <meta name="description" content="Windows上的快捷启动会变得缓慢快捷键启动指的是诸如win+shift+数字键和Ctrl+Alt+自定义键的快捷键启动方式，比如自定义Ctrl+Alt+T为Windows Terminal的快捷键。 Starting with hotkey means hotkeys like win+shift+num and Ctrl+Alt+custom keyon Windows. For examp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts">
-<meta property="og:url" content="https://smallsquare.github.io/2022/03/27/Powershell-disable-runing-scripts/index.html">
+<meta property="og:title" content="Windows11&#x2F;10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11&#x2F;10">
+<meta property="og:url" content="https://smallsquare.github.io/Solution-to-slow-start-with-hot-key-on-Windows11-10/index.html">
 <meta property="og:site_name" content="SmallSquare&#39;s Blog">
-<meta property="og:description" content="当使用命令 set-executionpolicy remotesigned 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。 When using the command set-executionpolicy remotesigned to allow scripts running on powershell, current user may not be a">
+<meta property="og:description" content="Windows上的快捷启动会变得缓慢快捷键启动指的是诸如win+shift+数字键和Ctrl+Alt+自定义键的快捷键启动方式，比如自定义Ctrl+Alt+T为Windows Terminal的快捷键。 Starting with hotkey means hotkeys like win+shift+num and Ctrl+Alt+custom keyon Windows. For examp">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-27T21:03:33.000Z">
-<meta property="article:modified_time" content="2022-03-30T22:12:17.083Z">
+<meta property="og:image" content="https://smallsquare.github.io/Solution-to-slow-start-with-hot-key-on-Windows11-10/terminal.png">
+<meta property="article:published_time" content="2022-04-09T21:23:41.000Z">
+<meta property="article:modified_time" content="2022-04-16T21:18:19.043Z">
 <meta property="article:author" content="SmallSquare">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="EN">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://smallsquare.github.io/Solution-to-slow-start-with-hot-key-on-Windows11-10/terminal.png">
   
   
-  <title>解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts - SmallSquare&#39;s Blog</title>
+  <title>Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10 - SmallSquare&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -177,7 +179,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts">
+            <span class="h2" id="subtitle" title="Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10">
               
             </span>
 
@@ -192,8 +194,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-27 22:03" pubdate>
-        2022年3月27日 晚上
+      <time datetime="2022-04-09 22:23" pubdate>
+        2022年4月9日 晚上
       </time>
     </span>
   
@@ -203,7 +205,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      851 字
+      803 字
     </span>
   
 
@@ -212,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8 分钟
+      7 分钟
     </span>
   
 
@@ -249,15 +251,19 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">解决Powershell阻止脚本运行遇到的问题 Solution to powershell disable runing scripts</h1>
+            <h1 style="display: none">Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10</h1>
             
             <div class="markdown-body">
-              <p>当使用命令 <code>set-executionpolicy remotesigned</code> 解除Powershell对脚本运行的限制时，目前的用户可能没有被应用新的策略。</p>
-<p>When using the command <code>set-executionpolicy remotesigned</code> to allow scripts running on powershell, current user may not be appled the change.</p>
-<figure class="highlight dsconfig"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-built_in">set-executionpolicy</span> : <span class="hljs-string">Windows</span> <span class="hljs-string">PowerShell</span> 已成功更新你的执行策略，但在更具体的作业域中定义的策略覆盖了该设置。由于发生覆盖，你的外壳程序将保留其当前的有效执行策略 <span class="hljs-string">Restricted</span>。请键入“<span class="hljs-string">Get-ExecutionPolicy</span> -<span class="hljs-string">List</span>”以查看你的执行策略设置。有关详细信息，请参阅“<span class="hljs-string">Get-Help</span> <span class="hljs-string">Set-ExecutionPolicy</span>”。<br>所在位置 行:<span class="hljs-string">1</span> 字符: <span class="hljs-string">1</span><br>+ <span class="hljs-built_in">set-executionpolicy</span> <span class="hljs-string">remotesigned</span><br>+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>+ <span class="hljs-string">CategoryInfo</span> : <span class="hljs-string">PermissionDenied</span>: (:) [<span class="hljs-string">Set-ExecutionPolicy</span>], <span class="hljs-string">SecurityException</span><br>+ <span class="hljs-string">FullyQualifiedErrorId</span> : <span class="hljs-string">ExecutionPolicyOverride</span>,<span class="hljs-string">Microsoft</span>.<span class="hljs-string">PowerShell</span>.<span class="hljs-string">Commands</span>.<span class="hljs-string">SetExecutionPolicyCommand</span><br></code></pre></td></tr></table></figure>
-
-<p>这时可以使用命令<code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code>来更新当前用户的策略，然后就可以轻松地在powershell运行脚本啦~</p>
-<p>In this case, we can use command <code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code> to update the policy on current user. It will work now.</p>
+              <h1 id="Windows上的快捷启动会变得缓慢"><a href="#Windows上的快捷启动会变得缓慢" class="headerlink" title="Windows上的快捷启动会变得缓慢"></a>Windows上的快捷启动会变得缓慢</h1><p>快捷键启动指的是诸如<code>win+shift+数字键</code>和<code>Ctrl+Alt+自定义键</code>的快捷键启动方式，比如自定义<code>Ctrl+Alt+T</code>为Windows Terminal的快捷键。</p>
+<p>Starting with hotkey means hotkeys like <code>win+shift+num</code> and <code>Ctrl+Alt+custom key</code>on Windows. For example, people often set <code>Ctrl+Alt+T</code> to be the hotkey of starting Windows Terminal.</p>
+<p><img src="/Solution-to-slow-start-with-hot-key-on-Windows11-10/terminal.png" srcset="/img/loading.gif" lazyload alt="Windows Terminal"></p>
+<p>但是Windows有个bug会使得快捷键启动反应很慢。</p>
+<p>But there is a bug on Windows making it slow when starting something.</p>
+<h1 id="Windows10"><a href="#Windows10" class="headerlink" title="Windows10"></a>Windows10</h1><p>在Windows10上，进入设置，隐私，后台应用，关闭“设置”的后台权限即可解决。</p>
+<p>On Windows10, you can solve that by going to Settings, Privacy, Background Apps and turning off the permission of “Setting”.</p>
+<h1 id="Windows11"><a href="#Windows11" class="headerlink" title="Windows11"></a>Windows11</h1><p>Windows11中，微软移除了Windows10里的后台应用菜单，但是可以进入应用设置菜单关闭这个选项。在Windows11上，在开始菜单右键设置，进入应用设置，将后台应用权限修改为“从不”。</p>
+<p>In Windows 11, Microsoft removed the background application menu from Windows 10. On Windows 11, now you need to right-click on Settings in the Start menu, go to Application Settings and change the background application permission to “Never”.</p>
+<p><img src="/Solution-to-slow-start-with-hot-key-on-Windows11-10/setting.png" srcset="/img/loading.gif" lazyload alt="Setting on Windows11"></p>
 
             </div>
             <hr>
@@ -268,8 +274,6 @@
                     <i class="iconfont icon-category"></i>
                     
                       <a class="hover-with-bg" href="/categories/Windows/">Windows</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Windows/Powershell/">Powershell</a>
                     
                   </div>
                 
@@ -296,18 +300,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/06/pycharm-jupyter-inverse-color/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">PyCharm下的Jupyter Notebook输出图片颜色反转的原因</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/25/CSGO-common-commands/">
-                        <span class="hidden-mobile">CSGO中常用命令整理 CSGO common commands</span>
+                      <a href="/pycharm-jupyter-inverse-color/">
+                        <span class="hidden-mobile">PyCharm下的Jupyter Notebook输出图片颜色反转的原因</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
