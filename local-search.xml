@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>ModuleNotFoundError: No module named &#39;flaxformer&#39;</title>
+    <link href="/No-module-named-flaxformer/"/>
+    <url>/No-module-named-flaxformer/</url>
+    
+    <content type="html"><![CDATA[<p>✨Check the date of this article before reading!✨</p><h1 id="No-module-named-‘flaxformer’"><a href="#No-module-named-‘flaxformer’" class="headerlink" title="No module named ‘flaxformer’"></a>No module named ‘flaxformer’</h1><p>Recently, Google used more and more models built on JAX and Flax. When I try to run Vision Transformer pretrained models created by Google, I got the following error. </p><figure class="highlight vbnet"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">ModuleNotFoundError:</span> No <span class="hljs-keyword">module</span> named <span class="hljs-comment">&#x27;flaxformer&#x27;</span><br></code></pre></td></tr></table></figure><p>But I already installed the <code>requirements.txt</code>, I was confused about the error. And the <code>flaxformer</code> can not be installed by using <code>pip install [package name]</code> since it did not release on PyPI.</p><p>Then I checked the repositories of flax and flaxformer:<br><a href="https://github.com/google/flax">https://github.com/google/flax</a><br><a href="https://github.com/google/flaxformer">https://github.com/google/flaxformer</a></p><h1 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h1><p>The module <code>flaxformer</code> was not released, so it can be installed by:</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">pip install git+https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/google/</span>flaxformer<br></code></pre></td></tr></table></figure><p>Solved.🎉</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
+      
+      <tag>EN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10</title>
     <link href="/Solution-to-slow-start-with-hot-key-on-Windows11-10/"/>
     <url>/Solution-to-slow-start-with-hot-key-on-Windows11-10/</url>
