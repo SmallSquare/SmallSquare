@@ -16,22 +16,22 @@
   <meta name="author" content="SmallSquare">
   <meta name="keywords" content="">
   
-    <meta name="description" content="✨Check the date of this article before reading!✨ No module named ‘flaxformer’Recently, Google used more and more models built on JAX and Flax. When I try to run Vision Transformer pretrained models cr">
+    <meta name="description" content="带有端口转发的ssh，可以方便在Linux服务器上开个Jupyter Notebook在本机连入 1ssh -L localhost:[local port]:localhost:[remote port] [username]@[remote address]  查看训练卡详情，包括卡的温度、实时功率和显存占用等其中watch可以常驻终端动态查看，参数-n可以控制更新频率 1nvidia-smi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ModuleNotFoundError: No module named &#39;flaxformer&#39;">
-<meta property="og:url" content="https://smallsquare.github.io/No-module-named-flaxformer/index.html">
+<meta property="og:title" content="在Linux上训练深度学习模型常用的一些命令整理">
+<meta property="og:url" content="https://smallsquare.github.io/Common-commands-when-training-deep-learning-models-on-Linux/index.html">
 <meta property="og:site_name" content="SmallSquare&#39;s Blog">
-<meta property="og:description" content="✨Check the date of this article before reading!✨ No module named ‘flaxformer’Recently, Google used more and more models built on JAX and Flax. When I try to run Vision Transformer pretrained models cr">
+<meta property="og:description" content="带有端口转发的ssh，可以方便在Linux服务器上开个Jupyter Notebook在本机连入 1ssh -L localhost:[local port]:localhost:[remote port] [username]@[remote address]  查看训练卡详情，包括卡的温度、实时功率和显存占用等其中watch可以常驻终端动态查看，参数-n可以控制更新频率 1nvidia-smi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-17T17:08:59.000Z">
-<meta property="article:modified_time" content="2022-04-17T17:23:26.344Z">
+<meta property="article:published_time" content="2022-04-22T22:00:53.000Z">
+<meta property="article:modified_time" content="2022-04-22T22:10:43.240Z">
 <meta property="article:author" content="SmallSquare">
+<meta property="article:tag" content="整理">
 <meta property="article:tag" content="技术">
-<meta property="article:tag" content="EN">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>ModuleNotFoundError: No module named &#39;flaxformer&#39; - SmallSquare&#39;s Blog</title>
+  <title>在Linux上训练深度学习模型常用的一些命令整理 - SmallSquare&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -189,7 +189,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="ModuleNotFoundError: No module named &#39;flaxformer&#39;">
+            <span class="h2" id="subtitle" title="在Linux上训练深度学习模型常用的一些命令整理">
               
             </span>
 
@@ -204,8 +204,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-17 18:08" pubdate>
-        April 17, 2022 pm
+      <time datetime="2022-04-22 23:00" pubdate>
+        April 22, 2022 pm
       </time>
     </span>
   
@@ -215,7 +215,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      647 字
+      302 字
     </span>
   
 
@@ -224,7 +224,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      3 分钟
     </span>
   
 
@@ -261,19 +261,22 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ModuleNotFoundError: No module named &#39;flaxformer&#39;</h1>
+            <h1 style="display: none">在Linux上训练深度学习模型常用的一些命令整理</h1>
             
             <div class="markdown-body">
-              <p>✨Check the date of this article before reading!✨</p>
-<h1 id="No-module-named-‘flaxformer’"><a href="#No-module-named-‘flaxformer’" class="headerlink" title="No module named ‘flaxformer’"></a>No module named ‘flaxformer’</h1><p>Recently, Google used more and more models built on JAX and Flax. When I try to run Vision Transformer pretrained models created by Google, I got the following error. </p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">ModuleNotFoundError:</span> No <span class="hljs-keyword">module</span> named <span class="hljs-comment">&#x27;flaxformer&#x27;</span><br></code></pre></td></tr></table></figure>
-<p>But I already installed the <code>requirements.txt</code>, I was confused about the error. And the <code>flaxformer</code> can not be installed by using <code>pip install [package name]</code> since it did not release on PyPI.</p>
-<p>Then I checked the repositories of flax and flaxformer:<br><a target="_blank" rel="noopener" href="https://github.com/google/flax">https://github.com/google/flax</a><br><a target="_blank" rel="noopener" href="https://github.com/google/flaxformer">https://github.com/google/flaxformer</a></p>
-<h1 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h1><p>The module <code>flaxformer</code> was not released, so it can be installed by:</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">pip install git+https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/google/</span>flaxformer<br></code></pre></td></tr></table></figure>
+              <p>带有端口转发的ssh，可以方便在Linux服务器上开个Jupyter Notebook在本机连入</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs inform7">ssh -L localhost:<span class="hljs-comment">[local port]</span>:localhost:<span class="hljs-comment">[remote port]</span> <span class="hljs-comment">[username]</span>@<span class="hljs-comment">[remote address]</span><br></code></pre></td></tr></table></figure>
 
-<p>Solved.🎉</p>
+<p>查看训练卡详情，包括卡的温度、实时功率和显存占用等<br>其中<code>watch</code>可以常驻终端动态查看，参数<code>-n</code>可以控制更新频率</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvidia-smi</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">watch nvidia-smi</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">watch</span> -n <span class="hljs-number">0</span>.<span class="hljs-number">1</span> nvidia-smi<br></code></pre></td></tr></table></figure>
 
+<p>查看系统的整体运行情况<br>进入后按<code>e</code>可以调整下半部分单位，<code>E</code>调整上半部分单位，如k、m、g、t、p</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq"><span class="hljs-built_in">top</span><br></code></pre></td></tr></table></figure>
+
+<p>列出conda包含的环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> list<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -290,9 +293,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%B4%E7%90%86/">整理</a>
                     
-                      <a class="hover-with-bg" href="/tags/EN/">EN</a>
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
                     
                   </div>
                 
@@ -309,18 +312,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Common-commands-when-training-deep-learning-models-on-Linux/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">在Linux上训练深度学习模型常用的一些命令整理</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Solution-to-slow-start-with-hot-key-on-Windows11-10/">
-                        <span class="hidden-mobile">Windows11/10快捷键启动缓慢的解决方案 Solution to slow start with hot key on Windows11/10</span>
+                      <a href="/No-module-named-flaxformer/">
+                        <span class="hidden-mobile">ModuleNotFoundError: No module named 'flaxformer'</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

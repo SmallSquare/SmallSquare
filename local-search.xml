@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>在Linux上训练深度学习模型常用的一些命令整理</title>
+    <link href="/Common-commands-when-training-deep-learning-models-on-Linux/"/>
+    <url>/Common-commands-when-training-deep-learning-models-on-Linux/</url>
+    
+    <content type="html"><![CDATA[<p>带有端口转发的ssh，可以方便在Linux服务器上开个Jupyter Notebook在本机连入</p><figure class="highlight inform7"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs inform7">ssh -L localhost:<span class="hljs-comment">[local port]</span>:localhost:<span class="hljs-comment">[remote port]</span> <span class="hljs-comment">[username]</span>@<span class="hljs-comment">[remote address]</span><br></code></pre></td></tr></table></figure><p>查看训练卡详情，包括卡的温度、实时功率和显存占用等<br>其中<code>watch</code>可以常驻终端动态查看，参数<code>-n</code>可以控制更新频率</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvidia-smi</span><br></code></pre></td></tr></table></figure><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">watch nvidia-smi</span><br></code></pre></td></tr></table></figure><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">watch</span> -n <span class="hljs-number">0</span>.<span class="hljs-number">1</span> nvidia-smi<br></code></pre></td></tr></table></figure><p>查看系统的整体运行情况<br>进入后按<code>e</code>可以调整下半部分单位，<code>E</code>调整上半部分单位，如k、m、g、t、p</p><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq"><span class="hljs-built_in">top</span><br></code></pre></td></tr></table></figure><p>列出conda包含的环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> list<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep Learning</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>整理</tag>
+      
+      <tag>技术</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ModuleNotFoundError: No module named &#39;flaxformer&#39;</title>
     <link href="/No-module-named-flaxformer/"/>
     <url>/No-module-named-flaxformer/</url>
