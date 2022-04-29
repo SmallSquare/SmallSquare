@@ -10845,7 +10845,11 @@ article.article .content blockquote.pullquote {
   font-size: 1.15rem;
   position: relative;
 }
-article.article .content blockquote footer strong + cite {
+article.article .content a img {
+  margin: auto;
+  display: block;
+}
+article.article .content a footer strong + cite {
   margin-left: 0.5em;
 }
 article.article .content .message.message-immersive {
@@ -10938,6 +10942,9 @@ a.article-nav-next span {
 .navbar-main {
   box-shadow: none;
 }
+.navbar-main .navbar-container {
+  overflow-x: auto;
+}
 .navbar-main .navbar-menu,
 .navbar-main .navbar-start,
 .navbar-main .navbar-end {
@@ -10982,6 +10989,12 @@ a.article-nav-next span {
 }
 .navbar-logo img {
   max-height: 1.75rem;
+}
+@media screen and (min-width: 1088px) {
+  .navbar > .container .navbar-menu,
+  .container > .navbar .navbar-menu {
+    margin-right: 0rem;
+  }
 }
 @media screen and (max-width: 768px) {
   footer.footer .level-start {
