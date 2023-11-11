@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://smallsquare.github.io/Large-model/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://smallsquare.github.io/CSGO-common-commands/</loc>
+    
+    <lastmod>2023-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://smallsquare.github.io/Conv1x1/</loc>
     
     <lastmod>2023-03-17</lastmod>
@@ -83,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://smallsquare.github.io/CSGO-common-commands/</loc>
-    
-    <lastmod>2023-03-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://smallsquare.github.io/Common-commands-when-training-deep-learning-models-on-Linux/</loc>
     
     <lastmod>2023-03-17</lastmod>
@@ -148,7 +157,7 @@
 
   <url>
     <loc>https://smallsquare.github.io/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -156,28 +165,28 @@
   
   <url>
     <loc>https://smallsquare.github.io/tags/%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/tags/EN/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -186,70 +195,70 @@
   
   <url>
     <loc>https://smallsquare.github.io/categories/Hexo/</loc>
-    <lastmod>2023-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://smallsquare.github.io/categories/%E5%A8%B1%E4%B9%90/</loc>
-    <lastmod>2023-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://smallsquare.github.io/categories/%E5%A8%B1%E4%B9%90/CSGO/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/LaTeX/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/CSDN/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/Windows/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/Windows/Powershell/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/Pycharm/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/Deep-Learning/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smallsquare.github.io/categories/Machine-Learning/</loc>
-    <lastmod>2023-03-17</lastmod>
+    <lastmod>2023-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://smallsquare.github.io/categories/Have-fun/</loc>
+    <lastmod>2023-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://smallsquare.github.io/categories/Have-fun/CSGO/</loc>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
